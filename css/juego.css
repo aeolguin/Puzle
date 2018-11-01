@@ -5,7 +5,7 @@ body {
   margin: 5% auto;
   min-height: 100%;
   background-image: url(../images/adventure.jpg);
-  line-height: 0px;
+  
 
 }
 ul {
@@ -42,6 +42,7 @@ li::before {
   background: #E84A5F;
   height: 600px;
   width: 600px;
+  
 }
  
 .juego{
@@ -65,13 +66,19 @@ li::before {
 }
 
 #objetivo img {
+  
   width: 100px;
   height: 100px;
+  
+ 
 }
 
 .juego div img {
   height: 200px;
   width: 200px;
+  box-sizing: border-box;
+  padding: 1px;
+  display: block;
 }
 
 
