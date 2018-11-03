@@ -1,6 +1,6 @@
 // Arreglo que contiene las intrucciones del juego 
 var instrucciones = ["Presionando Incio se comienza el juego", "Utiliza el flechas del teclado para mover las piezas",
-"El juego finaliza cuando lograr formar la imagen del modelo"];
+"El juego finaliza cuando logras formar la siguiente imagen"];
 // Arreglo para ir guardando los movimientos que se vayan realizando
 var movimientos = [];
 
@@ -293,10 +293,6 @@ function capturarTeclas() {
 y ejecutando la función para que se capturen las teclas que 
 presiona el usuario */
 function iniciar() {
-  //  var recordProvisorio = movimientos.length;
-  //  if (record > recordProvisorio && recordProvisorio != 0) {
-  //  record = recordProvisorio;
-   // }
     movimientos = [];
     mezclarPiezas(30);
     capturarTeclas();

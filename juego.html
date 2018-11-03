@@ -11,7 +11,6 @@
       <p class="ganador">Lograste Completar el Juego!!!</p>
     </div>
     <div id="col-40">
-    
       <div id="titulo">
         <h1>BMO Arcade</h1>
       </div>
@@ -26,9 +25,19 @@
       </div>
       <div id="ultimo-mov">
         <div id="flecha" class="texto-centrado">
-          
         </div>
       </div>
+      <div class="jugando">
+        <div class="recordJugadas">
+          <p>record de jugadas</p>
+          <p id="record">0</p>
+          </div>
+          <div class="movimientosRealizados">
+          <p>cantidad de movimientos</p>
+          <p id="movimientosHechos">0</p>
+          </div>
+      </div>
+      
       
     </div>
     <div id="col-60">
@@ -45,17 +54,10 @@
       </div>
     </div>
     <div id="footer">
-      <div class="boton">
-      <button onclick="iniciar()">Iniciar Juego</button>
+      <div>
+      <button onclick="iniciar()"  class="boton">Iniciar Juego</button>
       </div>
-      <div class="recordJugadas">
-      <p>record de jugadas</p>
-      <p id="record">0</p>
-      </div>
-      <div class="movimientosRealizados">
-      <p>cantidad de movimientos</p>
-      <p id="movimientosHechos">0</p>
-      </div>
+      
       
     </div>
     <script src="js/juego.js"></script>

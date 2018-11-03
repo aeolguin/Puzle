@@ -12,21 +12,23 @@ body {
 }
 
 .ganador {
-  
   font-size: 50px;
   color: red;
-
+  text-align: -webkit-center;
+  margin-bottom: 5px;
 }
 
 ul {
   padding-left: 0;
   list-style: none;
 }
+
 li {
   padding: 5px 0;
   -webkit-animation: fadein 5s;
           animation: fadein 5s;
 }
+
 li::before {
   content: "• ";
   color: #EC6778;
@@ -35,6 +37,8 @@ li::before {
 #col-40 h1 {
   font-size: 20px;
   color: #E84A5F;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 #col-40, #col-60 {
@@ -42,10 +46,54 @@ li::before {
   margin: 0;
   vertical-align: top;
 }
+
 #col-40 {
   background: #FFF;
   padding: 30px;
   color: #000;
+}
+
+.jugando {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+#record {
+  padding: 30px;
+  background-color: aquamarine;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+}
+
+.recorjugadas {
+  text-align: center;
+}
+
+#movimientosHechos {
+  padding: 30px;
+  background-color: aquamarine;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  text-shadow: 0 0 1px black;
+  box-shadow: 0 0 5px #E84A5F;
+}
+
+#record {
+  padding: 30px;
+  background-color: aquamarine;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  text-shadow: 0 0 1px black;
+  box-shadow: 0 0 5px #E84A5F;
 }
 
 #col-60 {
@@ -98,7 +146,14 @@ li::before {
   justify-content: space-around;
 }
 
-
+.boton {
+  height: 100%;
+  background-color: aquamarine;  
+  font-size: 30px;
+  border: none;
+  box-shadow: 0 0 1px black;
+  cursor: pointer;
+}
 
 
 @-webkit-keyframes fadein {
