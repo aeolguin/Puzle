@@ -12,6 +12,8 @@ var grilla = [
     [7, 8, 9]
 ];
 
+var record = 100;
+
 /* Estas dos variables son para guardar la posición de la pieza vacía. 
 Esta posición comienza siendo la [2, 2]*/
 var filaVacia = 2;
@@ -58,6 +60,10 @@ function chequearSiGano() {
 function mostrarCartelGanador() {
   var muestraCartel = document.getElementById("cartelGanador");
   muestraCartel.classList.remove("ocultar");
+  var recordProvisorio = movimientos.length;
+    if (record > recordProvisorio && recordProvisorio != 0) {
+    record = recordProvisorio;
+    }
     //COMPLETAR
 }
 
@@ -145,6 +151,8 @@ function moverEnDireccion(direccion) {
 
   //COMPLETAR: Agregar la dirección del movimiento al arreglo de movimientos
         listaUltimoMovimiento(direccion);
+        actualizarPantallaMovActual();
+        actualizarPantallaRecord();
 
     }
 }
@@ -285,10 +293,28 @@ function capturarTeclas() {
 y ejecutando la función para que se capturen las teclas que 
 presiona el usuario */
 function iniciar() {
-    mostrarInstrucciones(instrucciones);
+  //  var recordProvisorio = movimientos.length;
+  //  if (record > recordProvisorio && recordProvisorio != 0) {
+  //  record = recordProvisorio;
+   // }
+    movimientos = [];
     mezclarPiezas(30);
     capturarTeclas();
 }
-
+mostrarInstrucciones(instrucciones);
 // Ejecutamos la función iniciar
-iniciar();
+//iniciar();
+
+function actualizarPantallaMovActual(){
+  var h1 = document.getElementById('movimientosHechos');
+  h1.innerText = movimientos.length;
+  
+  
+}
+
+function actualizarPantallaRecord(){
+  var h1 = document.getElementById('record');
+  h1.innerText = record;
+  
+  
+}

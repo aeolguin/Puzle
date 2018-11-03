@@ -11,13 +11,6 @@ body {
   display: none;
 }
 
-/*#cartelGanador {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-
-}*/
 .ganador {
   
   font-size: 50px;
@@ -57,8 +50,8 @@ li::before {
 
 #col-60 {
   background: aquamarine;
-  height: 600px;
-  width: 600px;
+  height: 450px;
+  width: 450px;
   
 }
  
@@ -89,12 +82,20 @@ li::before {
 }
 
 #juego div img {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1px;
   display: block;
+}
+
+#footer {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 
