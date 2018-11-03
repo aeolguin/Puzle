@@ -4,10 +4,27 @@ body {
   width: 940px;
   margin: 5% auto;
   min-height: 100%;
-  background-image: url(../images/adventure.jpg);
+  background-image: url(../images/adventure.jpg); 
+}
+
+.ocultar {
+  display: none;
+}
+
+/*#cartelGanador {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+
+}*/
+.ganador {
   
+  font-size: 50px;
+  color: red;
 
 }
+
 ul {
   padding-left: 0;
   list-style: none;
@@ -22,35 +39,39 @@ li::before {
   color: #EC6778;
 }
 
-.col-40 h1 {
+#col-40 h1 {
   font-size: 20px;
   color: #E84A5F;
 }
 
-.col-40, .col-60 {
+#col-40, #col-60 {
   display: table-cell;
   margin: 0;
   vertical-align: top;
 }
-.col-40 {
+#col-40 {
   background: #FFF;
   padding: 30px;
   color: #000;
 }
 
-.col-60 {
+#col-60 {
   background: aquamarine;
   height: 600px;
   width: 600px;
   
 }
  
-.juego{
+#juego{
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;  
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;  
 }
 
 #flecha{
@@ -67,10 +88,11 @@ li::before {
   height: 100px;
 }
 
-.juego div img {
+#juego div img {
   height: 200px;
   width: 200px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 1px;
   display: block;
 }

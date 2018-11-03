@@ -40,10 +40,24 @@ function listaUltimoMovimiento (direccion) {
 Existen diferentes formas de hacer este chequeo a partir de la grilla. */
 function chequearSiGano() {
     //COMPLETAR
+    var posicionGrilla = 1;
+    for (var i=0 ; i < grilla.length ; i++) {
+      for (var j=0 ; j < grilla.length ; j++) {
+        if (!(grilla[i][j] === posicionGrilla)) {
+          return false;
+        }
+        posicionGrilla++;
+        if (posicionGrilla === 10) {
+          return true;
+        }
+      }
+    }
 }
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
 function mostrarCartelGanador() {
+  var muestraCartel = document.getElementById("cartelGanador");
+  muestraCartel.classList.remove("ocultar");
     //COMPLETAR
 }
 
@@ -59,6 +73,12 @@ Se te ocurre cómo solucionar esto con una variable temporal?
 */
 function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPos2) {
     //COMPLETAR
+    var posicion1 = grilla [filaPos1] [columnaPos1];
+    console.log(posicion1);
+    grilla [filaPos1] [columnaPos1] = grilla [filaPos2] [columnaPos2]
+    grilla [filaPos2] [columnaPos2] = posicion1;
+    console.log(grilla);
+
 }
 
 // Actualiza la posición de la pieza vacía
@@ -70,6 +90,10 @@ function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
 // Para chequear si la posicón está dentro de la grilla.
 function posicionValida(fila, columna) {
     //COMPLETAR
+    if (!(fila < 0 || columna < 0 || fila > 2 || columna > 2)) {
+      return false;
+    }
+    return true;
 }
 
 /* Movimiento de fichas, en este caso la que se mueve es la blanca intercambiando su posición con otro elemento.
@@ -210,6 +234,7 @@ function mezclarPiezas(veces) {
     ];
 
   var direccion = direcciones[Math.floor(Math.random() * direcciones.length)];
+
   moverEnDireccion(direccion);
 
   setTimeout(function() {
@@ -230,6 +255,7 @@ function capturarTeclas() {
       evento.which === codigosDireccion.IZQUIERDA) {
 
       moverEnDireccion(evento.which);
+      
 
         var gano = chequearSiGano();
         if (gano) {
