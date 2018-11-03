@@ -74,11 +74,9 @@ Se te ocurre cómo solucionar esto con una variable temporal?
 function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPos2) {
     //COMPLETAR
     var posicion1 = grilla [filaPos1] [columnaPos1];
-    console.log(posicion1);
     grilla [filaPos1] [columnaPos1] = grilla [filaPos2] [columnaPos2]
     grilla [filaPos2] [columnaPos2] = posicion1;
-    console.log(grilla);
-
+    
 }
 
 // Actualiza la posición de la pieza vacía
@@ -92,10 +90,12 @@ function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
 // Para chequear si la posicón está dentro de la grilla.
 function posicionValida(fila, columna) {
     //COMPLETAR
-    if (!(fila < 0 || columna < 0 || fila > 2 || columna > 2)) {
+    if ((fila < 0 || columna < 0 || fila > 2 || columna > 2)) {
       return false;
     }
+    
     return true;
+
 }
 
 /* Movimiento de fichas, en este caso la que se mueve es la blanca intercambiando su posición con otro elemento.
@@ -108,13 +108,14 @@ function moverEnDireccion(direccion) {
   if (direccion === codigosDireccion.ABAJO) {
     nuevaFilaPiezaVacia = filaVacia - 1;
     nuevaColumnaPiezaVacia = columnaVacia;
-   
+       
   }
     
   // Mueve pieza hacia arriba, reemplazandola con la blanca
   else if (direccion === codigosDireccion.ARRIBA) {
     nuevaFilaPiezaVacia = filaVacia + 1;
     nuevaColumnaPiezaVacia = columnaVacia;
+    
   }
     
   // Mueve pieza hacia la derecha, reemplazandola con la blanca
@@ -122,7 +123,7 @@ function moverEnDireccion(direccion) {
     //COMPLETAR
     nuevaFilaPiezaVacia = filaVacia;
     nuevaColumnaPiezaVacia = columnaVacia - 1;
-
+    
   }
     
   // Mueve pieza hacia la izquierda, reemplazandola con la blanca
@@ -130,13 +131,15 @@ function moverEnDireccion(direccion) {
     // COMPLETAR
     nuevaFilaPiezaVacia = filaVacia;
     nuevaColumnaPiezaVacia = columnaVacia + 1;
+    
   }
 
   /* A continuación se chequea si la nueva posición es válida, si lo es, se intercambia. 
   Para que esta parte del código funcione correctamente deberás haber implementado 
   las funciones posicionValida, intercambiarPosicionesGrilla y actualizarPosicionVacia */
-
-    if (posicionValida(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia)) {
+  
+  if (posicionValida(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia)) {
+      
         intercambiarPosiciones(filaVacia, columnaVacia, nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
         actualizarPosicionVacia(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
 
@@ -174,6 +177,7 @@ el intercambio en la pantalla (DOM). Para que funcione debera estar implementada
 la funcion intercambiarPosicionesGrilla() */
 function intercambiarPosiciones(fila1, columna1, fila2, columna2) {
   // Intercambio posiciones en la grilla
+  
   var pieza1 = grilla[fila1][columna1];
   var pieza2 = grilla[fila2][columna2];
 
