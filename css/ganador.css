@@ -1,0 +1,62 @@
+.ganador {
+    font-size: 50px;
+    color: red;
+    text-align: -webkit-center;
+    margin-bottom: 5px;
+  }
+
+  .ocultar {
+    display: none;
+  }
+
+  .jugando {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  #record {
+    padding: 30px;
+    background-color: aquamarine;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .recorjugadas {
+    text-align: center;
+  }
+
+  #movimientosHechos {
+    padding: 30px;
+    background-color: aquamarine;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    text-shadow: 0 0 1px black;
+    box-shadow: 0 0 5px #E84A5F;
+  }
+  
+  #record {
+    padding: 30px;
+    background-color: aquamarine;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    text-shadow: 0 0 1px black;
+    box-shadow: 0 0 5px #E84A5F;
+  }
+
+  .boton {
+    height: 100%;
+    background-color: aquamarine;  
+    font-size: 30px;
+    border: none;
+    box-shadow: 0 0 1px black;
+    cursor: pointer;
+  }
