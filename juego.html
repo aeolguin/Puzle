@@ -5,6 +5,7 @@
     <title>BMO Arcade</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/juego.css">
+    <link rel="stylesheet" href="css/ganador.css">
   </head>
   <body>
     <div id="col-40">
@@ -25,8 +26,6 @@
         </div>
       </div>
       
-      
-      
     </div>
     <div id="col-60">
       <div id="juego">
@@ -42,18 +41,20 @@
       </div>
     </div>
     <div id="footer"> </div>
-      <div>
-    <div id="modalGanador">
-      <button onclick="iniciar()"  class="boton">Iniciar Juego</button>
+    <div id="modalGanador" class="ocultar">
+      <div id="boxcentral">
       <div class="jugando">
-          <div class="recordJugadas">
-            <p>record de jugadas</p>
+          <div class="record">
+            <p>RECORD</p>
             <p id="record">0</p>
           </div>
           <div class="movimientosRealizados">
-            <p>cantidad de movimientos</p>
+            <p>MOVIMIENTOS REALIZADOS</p>
             <p id="movimientosHechos">0</p>
           </div>
+       <button onclick="volverAJugar()"  class="boton">VOLVER A JUGAR</button>
+    </div>
+    </div>
     </div>
     <script src="js/juego.js"></script>
   </body>

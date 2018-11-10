@@ -1,5 +1,6 @@
 // Arreglo que contiene las intrucciones del juego 
-var instrucciones = ["Presionando Incio se comienza el juego", "Utiliza el flechas del teclado para mover las piezas",
+var instrucciones = ["Utiliza el flechas del teclado para mover las piezas",
+"Una vez completado el juevo podrás volver a jugar",
 "El juego finaliza cuando logras formar la siguiente imagen"];
 // Arreglo para ir guardando los movimientos que se vayan realizando
 var movimientos = [];
@@ -58,7 +59,7 @@ function chequearSiGano() {
 
 // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
 function mostrarCartelGanador() {
-  var muestraCartel = document.getElementById("cartelGanador");
+  var muestraCartel = document.getElementById("modalGanador");
   muestraCartel.classList.remove("ocultar");
   var recordProvisorio = movimientos.length;
     if (record > recordProvisorio && recordProvisorio != 0) {
@@ -300,17 +301,20 @@ function iniciar() {
 mostrarInstrucciones(instrucciones);
 // Ejecutamos la función iniciar
 //iniciar();
+iniciar();
 
 function actualizarPantallaMovActual(){
   var h1 = document.getElementById('movimientosHechos');
   h1.innerText = movimientos.length;
-  
-  
 }
 
 function actualizarPantallaRecord(){
   var h1 = document.getElementById('record');
   h1.innerText = record;
-  
-  
+}
+
+function volverAJugar() {
+  var h2 = document.getElementById("modalGanador");
+  h2.classList.add("ocultar");
+  iniciar();
 }
